@@ -1,0 +1,9 @@
+{
+    "onshape_api": "https://cad.onshape.com",
+    "onshape_access_key": "x4eTiIWjDY6ThWQF05iwyT9x",
+    "onshape_secret_key": "PoOkcEz6RIUsnz10b2zPBYHhMGwTRinxR7ee7iOiO5dGxCEE",
+    "documentId": "1c63d90d811cafbc229b7bb7",
+    "outputFormat": "sdf",
+    "packageName": "coffee_robot",
+    "drawFrames": false
+}

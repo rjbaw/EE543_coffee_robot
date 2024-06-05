@@ -1,0 +1,219 @@
+<sdf version="1.6">
+<model name="onshape">
+<link name="slider_base">
+<frame name="slider_base_frame"><pose>0 0 0 0 -0 0</pose></frame>
+<visual name="slider_base_0_slider_base_visual">
+<pose>0 1.3877787807814456755e-17 -0.025000000000000001388 0 -0 1.570796326794896558</pose>
+<geometry>
+<mesh><uri>file://stl_files//slider_base.stl</uri></mesh>
+</geometry>
+<material><ambient>0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1</ambient><diffuse>0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="slider_base_0_slider_base_visual">
+<pose>0 1.3877787807814456755e-17 -0.025000000000000001388 0 -0 1.570796326794896558</pose>
+<geometry>
+<mesh><uri>file://stl_files//slider_base.stl</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose frame="slider_base_frame">-1.7347234759768070944e-17 5.6667633548575706635e-17 -0.012500000000000000694 0 0 0</pose>
+<mass>196.25</mass>
+<inertia><ixx>16.364388020833334991</ixx><ixy>5.9463429550691647259e-15</ixy><ixz>0</ixz><iyy>16.364388020833331439</iyy><iyz>0</iyz><izz>32.708333333333342807</izz></inertia>
+</inertial>
+</link>
+
+<link name="base">
+<frame name="base_frame"><pose>0 0 0 0 -0 0</pose></frame>
+<visual name="base_0_base_visual">
+<pose>1.9428902930940239457e-16 -0.25000000000000005551 0 2.5326563729117402617e-29 1.8981965531880585357e-29 3.1415926535897926719</pose>
+<geometry>
+<mesh><uri>file://stl_files//base.stl</uri></mesh>
+</geometry>
+<material><ambient>0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1</ambient><diffuse>0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="base_0_base_visual">
+<pose>1.9428902930940239457e-16 -0.25000000000000005551 0 2.5326563729117402617e-29 1.8981965531880585357e-29 3.1415926535897926719</pose>
+<geometry>
+<mesh><uri>file://stl_files//base.stl</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose frame="base_frame">1.673283281743774464e-16 -0.25000000000000005551 0.10839875602683685107 0 0 0</pose>
+<mass>88.618276691282687807</mass>
+<inertia><ixx>2.7336548355441787628</ixx><ixy>-2.4199392489876892841e-16</ixy><ixz>1.0658795969249740055e-28</ixz><iyy>2.7336548355441787628</iyy><iyz>-1.4221429015740009383e-28</iyz><izz>2.8815676509512706538</izz></inertia>
+</inertial>
+</link>
+
+<link name="joint_connector">
+<frame name="joint_connector_frame"><pose>0 0 0 0 -0 0</pose></frame>
+<visual name="joint_connector_0_joint_connector_visual">
+<pose>2.2204460492503130808e-16 -0.25 0.5 -1.0654427020902723213e-16 1.8361192345487250241e-14 2.9803991001943637151</pose>
+<geometry>
+<mesh><uri>file://stl_files//joint_connector.stl</uri></mesh>
+</geometry>
+<material><ambient>0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1</ambient><diffuse>0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="joint_connector_0_joint_connector_visual">
+<pose>2.2204460492503130808e-16 -0.25 0.5 -1.0654427020902723213e-16 1.8361192345487250241e-14 2.9803991001943637151</pose>
+<geometry>
+<mesh><uri>file://stl_files//joint_connector.stl</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose frame="joint_connector_frame">1.6676161733996180353e-08 -0.24999999324013080781 0.75987241605285216206 0 0 0</pose>
+<mass>28.13759709424636668</mass>
+<inertia><ixx>0.6037818416054283599</ixx><ixy>-0.0015214464136306547672</ixy><ixz>-2.1160598831639788648e-08</ixz><iyy>0.59467260133416888213</iyy><iyz>-1.8560029651163322779e-08</iyz><izz>0.12066133254675763531</izz></inertia>
+</inertial>
+</link>
+
+<link name="joint">
+<frame name="joint_frame"><pose>0 0 0 0 -0 0</pose></frame>
+<visual name="joint_0_joint_visual">
+<pose>0.04567146112819880921 -0.054799610350664662572 0.90466459226476392264 -1.4976190893622706774e-15 1.2437461080070706387 -0.16119355339538343763</pose>
+<geometry>
+<mesh><uri>file://stl_files//joint.stl</uri></mesh>
+</geometry>
+<material><ambient>0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1</ambient><diffuse>0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="joint_0_joint_visual">
+<pose>0.04567146112819880921 -0.054799610350664662572 0.90466459226476392264 -1.4976190893622706774e-15 1.2437461080070706387 -0.16119355339538343763</pose>
+<geometry>
+<mesh><uri>file://stl_files//joint.stl</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose frame="joint_frame">0.41277210999075675257 -0.11449157204272453203 1.0308333350987732846 0 0 0</pose>
+<mass>58.257899734588079355</mass>
+<inertia><ixx>0.8734840725610080181</ixx><ixy>0.70479328911462857388</ixy><ixz>-1.4961171219162439083</ixz><iyy>5.0932803819757159758</iyy><iyz>0.24327649158643577243</iyz><izz>4.7129026313383048929</izz></inertia>
+</inertial>
+</link>
+
+<link name="joint_2">
+<frame name="joint_2_frame"><pose>0 0 0 0 -0 0</pose></frame>
+<visual name="joint_2_0_joint_visual">
+<pose>0.77545875016405296787 -0.37609295419393673487 1.1591344058789494476 -3.141592653589793116 -1.3955917527194452443 -0.1611935533953745836</pose>
+<geometry>
+<mesh><uri>file://stl_files//joint.stl</uri></mesh>
+</geometry>
+<material><ambient>0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1</ambient><diffuse>0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="joint_2_0_joint_visual">
+<pose>0.77545875016405296787 -0.37609295419393673487 1.1591344058789494476 -3.141592653589793116 -1.3955917527194452443 -0.1611935533953745836</pose>
+<geometry>
+<mesh><uri>file://stl_files//joint.stl</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose frame="joint_2_frame">1.1571725567292305836 -0.43816146887541951305 1.0906753837049112388 0 0 0</pose>
+<mass>58.257899734588079355</mass>
+<inertia><ixx>0.52001668960702662758</ixx><ixy>0.76226596702263593741</ixy><ixz>0.84410378340903380323</ixz><iyy>5.0839355064419136099</iyy><iyz>-0.13725377617276693365</iyz><izz>5.0757148898257913316</izz></inertia>
+</inertial>
+</link>
+
+<link name="joint_connector_2">
+<frame name="joint_connector_2_frame"><pose>0 0 0 0 -0 0</pose></frame>
+<visual name="joint_connector_2_0_joint_connector_visual">
+<pose>1.9729229426510801471 -0.36817905539329665032 1.0946235190922799507 -3.1415926535897908956 1.3823408418668621245 -0.16119355339537724814</pose>
+<geometry>
+<mesh><uri>file://stl_files//joint_connector.stl</uri></mesh>
+</geometry>
+<material><ambient>0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1</ambient><diffuse>0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="joint_connector_2_0_joint_connector_visual">
+<pose>1.9729229426510801471 -0.36817905539329665032 1.0946235190922799507 -3.1415926535897908956 1.3823408418668621245 -0.16119355339537724814</pose>
+<geometry>
+<mesh><uri>file://stl_files//joint_connector.stl</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose frame="joint_connector_2_frame">1.7209608576703165905 -0.32720891871212043345 1.0459385290273808256 0 0 0</pose>
+<mass>28.13759709424636668</mass>
+<inertia><ixx>0.14939283175590498121</ixx><ixy>0.072364217427873675503</ixy><ixz>-0.087798638804753373344</ixz><iyy>0.5826584654220642312</iyy><iyz>0.014276426740556654241</iyz><izz>0.5870644783083709406</izz></inertia>
+</inertial>
+</link>
+
+<link name="joint_end">
+<frame name="joint_end_frame"><pose>0 0 0 0 -0 0</pose></frame>
+<visual name="joint_end_0_joint_end_visual">
+<pose>1.9729229426510801471 -0.36817905539329665032 1.0946235190922799507 -1.3679986560417052299 0.37597494694958172312 -1.656631805932467838</pose>
+<geometry>
+<mesh><uri>file://stl_files//joint_end.stl</uri></mesh>
+</geometry>
+<material><ambient>0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1</ambient><diffuse>0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="joint_end_0_joint_end_visual">
+<pose>1.9729229426510801471 -0.36817905539329665032 1.0946235190922799507 -1.3679986560417052299 0.37597494694958172312 -1.656631805932467838</pose>
+<geometry>
+<mesh><uri>file://stl_files//joint_end.stl</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose frame="joint_end_frame">2.4402103402534751631 -0.44416201181595493797 1.184914443181307675 0 0 0</pose>
+<mass>81.382276691282697811</mass>
+<inertia><ixx>3.2923762242544079015</ixx><ixy>0.3330736252323918678</ixy><ixz>-0.064264210241039440574</ixz><iyy>6.4474428902671121477</iyy><iyz>0.9873514001201284529</iyz><izz>4.3892802004261062265</izz></inertia>
+</inertial>
+</link>
+
+<joint name="theta6" type="revolute">
+<pose>1.9729229426510801471 -0.36817905539329665032 1.0946235190922799507 1.7735939975480881081 0.37597494694958172312 -1.656631805932467838</pose>
+<parent>joint_connector_2</parent>
+<child>joint_end</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<joint name="theta5" type="revolute">
+<pose>1.569049019409952006 -0.40382078838462676096 1.0196867391027901739 1.5707963267948987784 1.3823408418668621245 -0.16119355339537724814</pose>
+<parent>joint_2</parent>
+<child>joint_connector_2</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity><lower>-1.570796326794896558</lower><upper>1.570796326794896558</upper></limit>
+</axis>
+</joint>
+
+<joint name="theta4" type="revolute">
+<pose>0.77739594414632207098 -0.2750945667312020837 1.1616653960478848795 -1.570796326794896336 -1.3955917527194452443 -0.1611935533953745836</pose>
+<parent>joint</parent>
+<child>joint_2</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity><lower>-1.570796326794896558</lower><upper>1.570796326794896558</upper></limit>
+</axis>
+</joint>
+
+<joint name="theta3" type="revolute">
+<pose>0.016049640133063518971 -0.15129635745526351376 0.89999999999999913403 1.5707963267948952257 1.2437461080070706387 -0.16119355339538343763</pose>
+<parent>joint_connector</parent>
+<child>joint</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity><lower>-3.141592653589793116</lower><upper>0</upper></limit>
+</axis>
+</joint>
+
+<joint name="theta2" type="revolute">
+<pose>2.2125839930837439784e-16 -0.25 0.5 3.141592653589793116 1.8361192345487250241e-14 2.9803991001943637151</pose>
+<parent>base</parent>
+<child>joint_connector</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<joint name="d1" type="prismatic">
+<pose>8.3266726846886851465e-17 -0.50000000000000022204 6.331640932279349253e-30 1.570796326794896558 -2.5326563729117385801e-29 -1.5707963267948970021</pose>
+<parent>slider_base</parent>
+<child>base</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity><lower>-1</lower><upper>1</upper></limit>
+</axis>
+</joint>
+
+
+</model>
+</sdf>
