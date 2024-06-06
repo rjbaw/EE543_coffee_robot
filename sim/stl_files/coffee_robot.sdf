@@ -87,6 +87,7 @@
         </inertia>
       </inertial>
     </link>
+
     <link name="joint_connector">
       <frame name="joint_connector_frame">
         <pose>0 0 0 0 -0 0</pose>
@@ -132,6 +133,7 @@
         </inertia>
       </inertial>
     </link>
+
     <link name="joint">
       <frame name="joint_frame">
         <pose>0 0 0 0 -0 0</pose>
@@ -196,6 +198,7 @@
         </inertia>
       </inertial>
     </link>
+
     <link name="joint_2">
       <frame name="joint_2_frame">
         <pose>0 0 0 0 -0 0</pose>
@@ -260,6 +263,7 @@
         </inertia>
       </inertial>
     </link>
+
     <link name="joint_connector_2">
       <frame name="joint_connector_2_frame">
         <pose>0 0 0 0 -0 0</pose>
@@ -324,6 +328,7 @@
         </inertia>
       </inertial>
     </link>
+
     <link name="joint_end">
       <frame name="joint_end_frame">
         <pose>0 0 0 0 -0 0</pose>
@@ -388,6 +393,7 @@
         </inertia>
       </inertial>
     </link>
+
     <joint name="theta6" type="revolute">
       <pose>
         1.9729229426510801471
@@ -407,6 +413,7 @@
         </limit>
       </axis>
     </joint>
+
     <joint name="theta5" type="revolute">
       <pose>
         1.569049019409952006
@@ -428,6 +435,7 @@
         </limit>
       </axis>
     </joint>
+
     <joint name="theta4" type="revolute">
       <pose>
         0.77739594414632207098
@@ -449,6 +457,7 @@
         </limit>
       </axis>
     </joint>
+
     <joint name="theta3" type="revolute">
       <pose>
         0.016049640133063518971
@@ -470,6 +479,7 @@
         </limit>
       </axis>
     </joint>
+
     <joint name="theta2" type="revolute">
       <pose>0 -0.25 0.5 3.141592653589793116 0 2.9803991001943637151</pose>
       <parent>base</parent>
@@ -482,6 +492,7 @@
         </limit>
       </axis>
     </joint>
+
     <joint name="d1" type="prismatic">
       <pose>0 -0.5 0 1.570796326794896558 0 -1.5707963267948970021</pose>
       <parent>slider_base</parent>
