@@ -1,5 +1,5 @@
 <sdf version="1.6">
-<model name="onshape">
+<model name="coffee_robot">
 <link name="slider_base">
 <frame name="slider_base_frame"><pose>0 0 0 0 -0 0</pose></frame>
 <visual name="slider_base_0_slider_base_visual">
