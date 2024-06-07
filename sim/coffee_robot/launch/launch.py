@@ -14,12 +14,77 @@ def generate_launch_description():
     return LaunchDescription(
         [
             ExecuteProcess(
-                cmd=["ign", "gazebo", "--verbose", "-r", world_path], output="screen"
+                cmd=["ign", "gazebo", "--verbose", "-r", world_path], 
+                output="screen",
             ),
             Node(
                 package="ros_gz_sim",
                 executable="create",
-                arguments=["-name", "my_robot", "-file", robot_path],
+                arguments=["-name", "coffee_robot", "-file", robot_path],
+                output="screen",
+            ),
+            Node(
+                package="ros_gz_bridge",
+                executable="parameter_bridge",
+                arguments=[
+                    "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock"
+                    ],
+                output="screen",
+                ),
+            Node(
+                package="ros_gz_bridge",
+                executable="parameter_bridge",
+                arguments=[
+                    "/world/shapes/dynamic_pose/info@geometry_msgs/msg/PoseArray@gz.msgs.Pose_V"
+                    ],
+                output="screen",
+            ),
+            Node(
+                package="ros_gz_bridge",
+                executable="parameter_bridge",
+                arguments=[
+                    "/dd1@std_msgs/msg/Float64@ignition.msgs.Double"
+                    ],
+                output="screen",
+            ),
+            Node(
+                package="ros_gz_bridge",
+                executable="parameter_bridge",
+                arguments=[
+                    "/dtheta2@std_msgs/msg/Float64@ignition.msgs.Double"
+                    ],
+                output="screen",
+            ),
+            Node(
+                package="ros_gz_bridge",
+                executable="parameter_bridge",
+                arguments=[
+                    "/dtheta3@std_msgs/msg/Float64@ignition.msgs.Double"
+                    ],
+                output="screen",
+            ),
+            Node(
+                package="ros_gz_bridge",
+                executable="parameter_bridge",
+                arguments=[
+                    "/dtheta4@std_msgs/msg/Float64@ignition.msgs.Double"
+                    ],
+                output="screen",
+            ),
+            Node(
+                package="ros_gz_bridge",
+                executable="parameter_bridge",
+                arguments=[
+                    "/dtheta5@std_msgs/msg/Float64@ignition.msgs.Double"
+                    ],
+                output="screen",
+            ),
+            Node(
+                package="ros_gz_bridge",
+                executable="parameter_bridge",
+                arguments=[
+                    "/dtheta6@std_msgs/msg/Float64@ignition.msgs.Double"
+                    ],
                 output="screen",
             ),
         ]
