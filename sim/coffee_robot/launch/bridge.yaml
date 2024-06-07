@@ -1,0 +1,32 @@
+- topic_name: "clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "ignition.msgs.Clock"
+  direction: GZ_TO_ROS
+
+- topic_name: "world/shapes/dynamic_pose/info"
+  ros_type_name: "geometry_msgs/msg/PoseArray"
+  gz_type_name: "gz.msgs.Pose_V"
+
+- topic_name: "dd1"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+
+- topic_name: "dtheta2"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+
+- topic_name: "dtheta3"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+
+- topic_name: "dtheta4"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+
+- topic_name: "dtheta5"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+
+- topic_name: "dtheta6"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"

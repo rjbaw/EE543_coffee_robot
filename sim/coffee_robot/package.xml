@@ -3,9 +3,9 @@
 <package format="3">
   <name>coffee_robot</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="root@todo.todo">root</maintainer>
-  <license>TODO: License declaration</license>
+  <description>6DOF Coffee Brewing Robot</description>
+  <maintainer email="example@example.com">Emmy,Raveeroj</maintainer>
+  <license>MIT</license>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
