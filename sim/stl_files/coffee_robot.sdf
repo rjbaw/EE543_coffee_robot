@@ -394,6 +394,13 @@
       </inertial>
     </link>
 
+    <plugin
+      filename="libignition-gazebo-joint-controller-system.so"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>theta6</joint_name>
+      <initial_velocity>1.0</initial_velocity>
+      <topic>dtheta6</topic>
+    </plugin>
     <joint name="theta6" type="revolute">
       <pose>
         1.9729229426510801471
@@ -408,12 +415,19 @@
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <effort>1</effort>
+          <effort>100</effort>
           <velocity>20</velocity>
         </limit>
       </axis>
     </joint>
 
+    <plugin
+      filename="libignition-gazebo-joint-controller-system.so"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>theta5</joint_name>
+      <initial_velocity>0.0</initial_velocity>
+      <topic>dtheta5</topic>
+    </plugin>
     <joint name="theta5" type="revolute">
       <pose>
         1.569049019409952006
@@ -436,6 +450,13 @@
       </axis>
     </joint>
 
+    <plugin
+      filename="libignition-gazebo-joint-controller-system.so"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>theta4</joint_name>
+      <initial_velocity>0.0</initial_velocity>
+      <topic>dtheta4</topic>
+    </plugin>
     <joint name="theta4" type="revolute">
       <pose>
         0.77739594414632207098
@@ -458,6 +479,13 @@
       </axis>
     </joint>
 
+    <plugin
+      filename="libignition-gazebo-joint-controller-system.so"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>theta3</joint_name>
+      <initial_velocity>1.0</initial_velocity>
+      <topic>dtheta3</topic>
+    </plugin>
     <joint name="theta3" type="revolute">
       <pose>
         0.016049640133063518971
@@ -480,6 +508,15 @@
       </axis>
     </joint>
 
+    <plugin
+      filename="libignition-gazebo-joint-controller-system.so"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>theta2</joint_name>
+      <initial_velocity>1.0</initial_velocity>
+      <topic>dtheta2</topic>
+    </plugin>
+
+
     <joint name="theta2" type="revolute">
       <pose>0 -0.25 0.5 3.141592653589793116 0 2.9803991001943637151</pose>
       <parent>base</parent>
@@ -493,6 +530,14 @@
       </axis>
     </joint>
 
+    <plugin
+      filename="libignition-gazebo-joint-controller-system.so"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>d1</joint_name>
+      <initial_velocity>1.0</initial_velocity>
+      <topic>dd1</topic>
+    </plugin>
+
     <joint name="d1" type="prismatic">
       <pose>0 -0.5 0 1.570796326794896558 0 -1.5707963267948970021</pose>
       <parent>slider_base</parent>
@@ -500,12 +545,18 @@
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <effort>1</effort>
+          <effort>100</effort>
           <velocity>20</velocity>
           <lower>-1</lower>
           <upper>1</upper>
         </limit>
       </axis>
+    </joint>
+
+    <joint name="d0" type="fixed">
+      <pose> 0 0 0 0 0 0 </pose>
+      <parent>world</parent>
+      <child>slider_base</child>
     </joint>
   </model>
 </sdf>
