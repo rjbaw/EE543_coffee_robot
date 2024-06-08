@@ -24,15 +24,15 @@ def generate_launch_description():
                 arguments=["-name", "coffee_robot", "-file", robot_path],
                 output="screen",
             ),
-            # Node(
-                # package="ros_gz_bridge",
-                # executable="parameter_bridge",
-                # arguments=[
-                        # "--ros-args",
-                        # "-p",
-                        # f"config_file:={bridge_path}",
-                    # ],
-                # output="screen",
-            # ),
+            Node(
+                package="ros_gz_bridge",
+                executable="parameter_bridge",
+                arguments=[
+                        "--ros-args",
+                        "-p",
+                        f"config_file:={bridge_path}",
+                    ],
+                output="screen",
+            ),
         ]
     )

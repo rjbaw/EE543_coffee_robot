@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
   <model name="coffee_robot">
+
+    <!-- link section -->
+
     <link name="slider_base">
       <frame name="slider_base_frame">
         <pose>0 0 0 0 -0 0</pose>
@@ -394,265 +397,65 @@
       </inertial>
     </link>
 
-    <!--Joint Force Controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta6</joint_name>-->
-      <!--<use_force_commands>true</use_force_commands>-->
-      <!--<topic>motor6</topic>-->
-      <!--<p_gain>0.0</p_gain>-->
-      <!--<i_gain>0.0</i_gain>-->
-      <!--<d_gain>0.0</d_gain>-->
-    <!--</plugin>-->
-    <!--Joint Velocity Controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta6</joint_name>-->
-      <!--<initial_velocity>0.0</initial_velocity>-->
-      <!--<topic>dtheta6</topic>-->
-    <!--</plugin>-->
-    <!--Joint state publisher-->
-    <plugin
-      filename="libignition-gazebo-joint-state-publisher-system.so"
-      name="ignition::gazebo::systems::JointStatePublisher">
-      <joint_name>theta6</joint_name>
-    </plugin>
+    <!-- joint section -->
+
     <joint name="theta6" type="revolute">
-      <pose>
-        1.9729229426510801471
-        -0.36817905539329665032
-        1.0946235190922799507
-        1.7735939975480881081
-        0.37597494694958172312
-       -1.656631805932467838
-      </pose>
+      <pose>1.9729229426510801471 -0.36817905539329665032 1.0946235190922799507 1.7735939975480881081 0.37597494694958172312 -1.656631805932467838</pose>
       <parent>joint_connector_2</parent>
       <child>joint_end</child>
       <axis>
-        <xyz>0 0 1</xyz>
+	<xyz>0 0 1</xyz>
+	<limit><effort>1</effort><velocity>20</velocity></limit>
       </axis>
     </joint>
 
-    <!--Joint force controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta5</joint_name>-->
-      <!--<use_force_commands>true</use_force_commands>-->
-      <!--<topic>motor5</topic>-->
-      <!--<p_gain>0.0</p_gain>-->
-      <!--<i_gain>0.0</i_gain>-->
-      <!--<d_gain>0.0</d_gain>-->
-    <!--</plugin>-->
-    <!--Joint velocity controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta5</joint_name>-->
-      <!--<initial_velocity>0.0</initial_velocity>-->
-      <!--<topic>dtheta5</topic>-->
-    <!--</plugin>-->
-    <!--Joint state publisher-->
-    <plugin
-      filename="libignition-gazebo-joint-state-publisher-system.so"
-      name="ignition::gazebo::systems::JointStatePublisher">
-      <joint_name>theta5</joint_name>
-    </plugin>
-    <!--Joint 5-->
     <joint name="theta5" type="revolute">
-      <pose>
-        1.569049019409952006
-        -0.40382078838462676096
-        1.0196867391027901739
-        1.5707963267948987784
-        1.3823408418668621245
-        -0.16119355339537724814
-      </pose>
+      <pose>1.569049019409952006 -0.40382078838462676096 1.0196867391027901739 1.5707963267948987784 1.3823408418668621245 -0.16119355339537724814</pose>
       <parent>joint_2</parent>
       <child>joint_connector_2</child>
       <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <effort>1</effort>
-          <velocity>20</velocity>
-          <lower>-1.570796326794896558</lower>
-          <upper>1.570796326794896558</upper>
-        </limit>
+	<xyz>0 0 1</xyz>
+	<limit><effort>1</effort><velocity>20</velocity><lower>-1.570796326794896558</lower><upper>1.570796326794896558</upper></limit>
       </axis>
     </joint>
 
-    <!--Joint force controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta4</joint_name>-->
-      <!--<use_force_commands>true</use_force_commands>-->
-      <!--<topic>motor4</topic>-->
-      <!--<p_gain>0.0</p_gain>-->
-      <!--<i_gain>0.0</i_gain>-->
-      <!--<d_gain>0.0</d_gain>-->
-    <!--</plugin>-->
-    <!--Joint velocity controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta4</joint_name>-->
-      <!--<initial_velocity>0.0</initial_velocity>-->
-      <!--<topic>dtheta4</topic>-->
-    <!--</plugin>-->
-    <!--Joint state publisher-->
-    <plugin
-      filename="libignition-gazebo-joint-state-publisher-system.so"
-      name="ignition::gazebo::systems::JointStatePublisher">
-      <joint_name>theta4</joint_name>
-    </plugin>
     <joint name="theta4" type="revolute">
-      <pose>
-        0.77739594414632207098
-        -0.2750945667312020837
-        1.1616653960478848795
-        -1.570796326794896336
-        -1.3955917527194452443
-        -0.1611935533953745836
-      </pose>
+      <pose>0.77739594414632207098 -0.2750945667312020837 1.1616653960478848795 -1.570796326794896336 -1.3955917527194452443 -0.1611935533953745836</pose>
       <parent>joint</parent>
       <child>joint_2</child>
       <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <effort>1</effort>
-          <velocity>20</velocity>
-          <lower>-1.570796326794896558</lower>
-          <upper>1.570796326794896558</upper>
-        </limit>
+	<xyz>0 0 1</xyz>
+	<limit><effort>1</effort><velocity>20</velocity><lower>-1.570796326794896558</lower><upper>1.570796326794896558</upper></limit>
       </axis>
     </joint>
 
-    <!--Joint force controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta3</joint_name>-->
-      <!--<use_force_commands>true</use_force_commands>-->
-      <!--<topic>motor3</topic>-->
-      <!--<p_gain>0.0</p_gain>-->
-      <!--<i_gain>0.0</i_gain>-->
-      <!--<d_gain>0.0</d_gain>-->
-    <!--</plugin>-->
-    <!--Joint velocity controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta3</joint_name>-->
-      <!--<initial_velocity>0.0</initial_velocity>-->
-      <!--<topic>dtheta3</topic>-->
-    <!--</plugin>-->
-    <!--Joint state publisher-->
-    <plugin
-      filename="libignition-gazebo-joint-state-publisher-system.so"
-      name="ignition::gazebo::systems::JointStatePublisher">
-     <joint_name>theta3</joint_name>
-    </plugin>
     <joint name="theta3" type="revolute">
-      <pose>
-        0.016049640133063518971
-        -0.15129635745526351376
-        0.89999999999999913403
-        1.5707963267948952257
-        1.2437461080070706387
-        -0.16119355339538343763
-      </pose>
+      <pose>0.016049640133063518971 -0.15129635745526351376 0.89999999999999913403 1.5707963267948952257 1.2437461080070706387 -0.16119355339538343763</pose>
       <parent>joint_connector</parent>
       <child>joint</child>
       <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <effort>1</effort>
-          <velocity>20</velocity>
-          <lower>-3.141592653589793116</lower>
-          <upper>0</upper>
-        </limit>
+	<xyz>0 0 1</xyz>
+	<limit><effort>1</effort><velocity>20</velocity><lower>-3.141592653589793116</lower><upper>0</upper></limit>
       </axis>
     </joint>
 
-    <!--Joint force controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta2</joint_name>-->
-      <!--<use_force_commands>true</use_force_commands>-->
-      <!--<topic>motor2</topic>-->
-      <!--<p_gain>0.0</p_gain>-->
-      <!--<i_gain>0.0</i_gain>-->
-      <!--<d_gain>0.0</d_gain>-->
-    <!--</plugin>-->
-    <!--Joint velocity controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta2</joint_name>-->
-      <!--<initial_velocity>0.0</initial_velocity>-->
-      <!--<topic>dtheta2</topic>-->
-    <!--</plugin>-->
-    <!--Joint state publisher-->
-    <plugin
-      filename="libignition-joint-state-publisher-system.so"
-      name="ignition::gazebo::systems::JointStatePublisher">
-      <joint_name>theta2</joint_name>
-    </plugin>
     <joint name="theta2" type="revolute">
-      <pose>0 -0.25 0.5 3.141592653589793116 0 2.9803991001943637151</pose>
+      <pose>2.2125839930837439784e-16 -0.25 0.5 3.141592653589793116 1.8361192345487250241e-14 2.9803991001943637151</pose>
       <parent>base</parent>
       <child>joint_connector</child>
       <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <effort>1000</effort>
-          <velocity>20</velocity>
-        </limit>
+	<xyz>0 0 1</xyz>
+	<limit><effort>1</effort><velocity>20</velocity></limit>
       </axis>
     </joint>
 
-
-    <!--Joint force controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>theta3</joint_name>-->
-      <!--<use_force_commands>true</use_force_commands>-->
-      <!--<topic>motor3</topic>-->
-      <!--<p_gain>0.0</p_gain>-->
-      <!--<i_gain>0.0</i_gain>-->
-      <!--<d_gain>0.0</d_gain>-->
-    <!--</plugin>-->
-    <!--Joint velocity controller-->
-    <!--<plugin-->
-      <!--filename="libignition-gazebo-joint-controller-system.so"-->
-      <!--name="ignition::gazebo::systems::JointController">-->
-      <!--<joint_name>d1</joint_name>-->
-      <!--<initial_velocity>0.0</initial_velocity>-->
-      <!--<topic>dd1</topic>-->
-    <!--</plugin>-->
-    <!--Joint state publisher-->
-    <plugin
-     filename="libignition-gazebo-joint-controller-system.so"
-     name="ignition::gazebo::systems::JointStatePublisher">
-     <joint_name>d1</joint_name>
-    </plugin>
     <joint name="d1" type="prismatic">
-      <pose>0 -0.5 0 1.570796326794896558 0 -1.5707963267948970021</pose>
+      <pose>8.3266726846886851465e-17 -0.50000000000000022204 6.331640932279349253e-30 1.570796326794896558 -2.5326563729117385801e-29 -1.5707963267948970021</pose>
       <parent>slider_base</parent>
       <child>base</child>
       <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <effort>1000</effort>
-          <velocity>20</velocity>
-          <lower>-1</lower>
-          <upper>1</upper>
-        </limit>
+	<xyz>0 0 1</xyz>
+	<limit><effort>1</effort><velocity>20</velocity><lower>-1</lower><upper>1</upper></limit>
       </axis>
     </joint>
 
@@ -661,59 +464,141 @@
       <parent>world</parent>
       <child>slider_base</child>
     </joint>
+    
+    <!-- control section -->
+
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-position-controller-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointPositionController"> -->
+    <!--   <joint_name>theta6</joint_name> -->
+    <!--   <use_force_commands>true</use_force_commands> -->
+    <!--   <topic>/dtheta6</topic> -->
+    <!--   <p_gain>1.0</p_gain> -->
+    <!--   <i_gain>0.1</i_gain> -->
+    <!--   <d_gain>0.01</d_gain> -->
+    <!-- </plugin> -->
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-state-publisher-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointStatePublisher"> -->
+    <!--   <joint_name>theta6</joint_name> -->
+    <!-- </plugin> -->
+
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-position-controller-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointPositionController"> -->
+    <!--   <joint_name>theta5</joint_name> -->
+    <!--   <use_force_commands>true</use_force_commands> -->
+    <!--   <topic>dtheta5</topic> -->
+    <!--   <p_gain>1.0</p_gain> -->
+    <!--   <i_gain>0.1</i_gain> -->
+    <!--   <d_gain>0.01</d_gain> -->
+    <!-- </plugin> -->
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-state-publisher-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointStatePublisher"> -->
+    <!--   <joint_name>theta5</joint_name> -->
+    <!-- </plugin> -->
+
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-position-controller-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointPositionController"> -->
+    <!--   <joint_name>theta4</joint_name> -->
+    <!--   <use_force_commands>true</use_force_commands> -->
+    <!--   <topic>dtheta4</topic> -->
+    <!--   <p_gain>1.0</p_gain> -->
+    <!--   <i_gain>0.1</i_gain> -->
+    <!--   <d_gain>0.01</d_gain> -->
+    <!-- </plugin> -->
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-state-publisher-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointStatePublisher"> -->
+    <!--   <joint_name>theta4</joint_name> -->
+    <!-- </plugin> -->
+
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-position-controller-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointPositionController"> -->
+    <!--   <joint_name>theta3</joint_name> -->
+    <!--   <use_force_commands>true</use_force_commands> -->
+    <!--   <topic>dtheta3</topic> -->
+    <!--   <p_gain>1.0</p_gain> -->
+    <!--   <i_gain>0.1</i_gain> -->
+    <!--   <d_gain>0.01</d_gain> -->
+    <!-- </plugin> -->
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-state-publisher-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointStatePublisher"> -->
+    <!--   <joint_name>theta3</joint_name> -->
+    <!-- </plugin> -->
+
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-position-controller-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointPositionController"> -->
+    <!--   <joint_name>theta2</joint_name> -->
+    <!--   <use_force_commands>true</use_force_commands> -->
+    <!--   <topic>dtheta2</topic> -->
+    <!--   <p_gain>1.0</p_gain> -->
+    <!--   <i_gain>0.1</i_gain> -->
+    <!--   <d_gain>0.01</d_gain> -->
+    <!-- </plugin> -->
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-state-publisher-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointStatePublisher"> -->
+    <!--   <joint_name>theta2</joint_name> -->
+    <!-- </plugin> -->
+
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-position-controller-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointPositionController"> -->
+    <!--   <joint_name>d1</joint_name> -->
+    <!--   <use_force_commands>true</use_force_commands> -->
+    <!--   <topic>dd1</topic> -->
+    <!--   <p_gain>1.0</p_gain> -->
+    <!--   <i_gain>0.1</i_gain> -->
+    <!--   <d_gain>0.01</d_gain> -->
+    <!-- </plugin> -->
+    <!-- <plugin -->
+    <!--   filename="libignition-gazebo-joint-state-publisher-system.so" -->
+    <!--   name="ignition::gazebo::systems::JointStatePublisher"> -->
+    <!--   <joint_name>d1</joint_name> -->
+    <!-- </plugin> -->
 
     <plugin
-      filename="libignition-gazebo-joint-trajectory-controller-system.so"
-      name="ignition::gazebo::systems::JointTrajectoryController">
+
+filename="libignition-gazebo-joint-trajectory-controller-system.so"
+name="ignition::gazebo::systems::JointTrajectoryController">
       <topic>traj_ctrl</topic>
+
       <joint_name>d1</joint_name>
-      <position_p_gain>10</position_p_gain>
-      <position_i_gain>0.4</position_i_gain>
-      <position_d_gain>1.0</position_d_gain>
-      <position_i_min>-1</position_i_min>
-      <position_i_max>1</position_i_max>
-      <position_cmd_min>-20</position_cmd_min>
-      <position_cmd_max>20</position_cmd_max>
+      <position_p_gain>1.0</position_p_gain>
+      <position_i_gain>0.0</position_i_gain>
+      <position_d_gain>0.0</position_d_gain>
 
       <joint_name>theta2</joint_name>
-      <position_p_gain>10000</position_p_gain>
+      <position_p_gain>1.0</position_p_gain>
       <position_i_gain>0.0</position_i_gain>
-      <position_d_gain>0</position_d_gain>
+      <position_d_gain>0.0</position_d_gain>
 
       <joint_name>theta3</joint_name>
-      <position_p_gain>10</position_p_gain>
-      <position_i_gain>0.2</position_i_gain>
-      <position_d_gain>0.5</position_d_gain>
-      <position_i_min>-1</position_i_min>
-      <position_i_max>1</position_i_max>
-      <position_cmd_min>-10</position_cmd_min>
-      <position_cmd_max>10</position_cmd_max>
+      <position_p_gain>1.0</position_p_gain>
+      <position_i_gain>0.0</position_i_gain>
+      <position_d_gain>0.0</position_d_gain>
 
       <joint_name>theta4</joint_name>
-      <position_p_gain>10</position_p_gain>
-      <position_i_gain>0.2</position_i_gain>
-      <position_d_gain>0.5</position_d_gain>
-      <position_i_min>-1</position_i_min>
-      <position_i_max>1</position_i_max>
-      <position_cmd_min>-10</position_cmd_min>
-      <position_cmd_max>10</position_cmd_max>
+      <position_p_gain>1.0</position_p_gain>
+      <position_i_gain>0.0</position_i_gain>
+      <position_d_gain>0.0</position_d_gain>
 
       <joint_name>theta5</joint_name>
-      <position_p_gain>10</position_p_gain>
-      <position_i_gain>0.2</position_i_gain>
-      <position_d_gain>0.5</position_d_gain>
-      <position_i_min>-1</position_i_min>
-      <position_i_max>1</position_i_max>
-      <position_cmd_min>-10</position_cmd_min>
-      <position_cmd_max>10</position_cmd_max>
+      <position_p_gain>1.0</position_p_gain>
+      <position_i_gain>0.0</position_i_gain>
+      <position_d_gain>0.0</position_d_gain>
 
       <joint_name>theta6</joint_name>
-      <position_p_gain>4</position_p_gain>
+      <position_p_gain>1.0</position_p_gain>
       <position_i_gain>0.0</position_i_gain>
-      <position_d_gain>0.8</position_d_gain>
-      <velocity_p_gain>10</velocity_p_gain>
-      <velocity_i_gain>0.0</velocity_i_gain>
-      <velocity_d_gain>0.0</velocity_d_gain>
+      <position_d_gain>0.0</position_d_gain>
+
     </plugin>
 
 

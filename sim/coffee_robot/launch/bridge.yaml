@@ -35,6 +35,6 @@
   ros_type_name: "trajectory_msgs/msg/JointTrajectory"
   gz_type_name: "ignition.msgs.JointTrajectory"
 
-- topic_name: "model/coffee_robot/joint_trajectory_progress"
+- topic_name: "/traj_ctrl_progress"
   ros_type_name: "std_msgs/msg/Float64"
   gz_type_name: "ignition.msgs.Double"
